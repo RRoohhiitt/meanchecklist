@@ -1,0 +1,28 @@
+<div class="registerContainer">
+    <div class="col-md-4 col-md-offset-4">
+        <form  role="form" name="regForm" ng-submit="!regForm.$invalid && register(regForm)" novalidate>
+            <div class="form-group">
+                <label for="usr">Username</label>
+                <input type="text" name="username" placeholder="Username" ng-model="reg_model.user" ng-minlength="5" class="form-control" id="usr" required>
+                <p class="alert-danger" ng-show="regForm.username.$touched && regForm.username.$dirty && regForm.username.$error.minlength"> Username Should contain atleast 5 character</p>
+                <!--<p class="alert alert-danger" ng-show="regForm.username.$touched && regForm.username.$error.required">Username should not be empty</p>-->
+            </div>
+            <div class="form-group">
+                <label for="usr">Email id</label>
+                <input type="email" name="email"  placeholder="Email id" ng-model="reg_model.email" class="form-control" id="usr" required>
+            </div>
+            <div class="form-group">
+                <label for="usr">Password</label>
+                <input type="password" name="password"  placeholder="Password" ng-model="reg_model.psw" class="form-control" id="usr" required>
+            </div>
+            <div class="form-group">
+                <label for="usr">Password Again</label>
+                <input type="password" name="password2"  placeholder="Password" ng-model="reg_model.psw2" class="form-control" id="usr" required> 
+                <p class="alert-danger"  ng-show="regForm.password2.$dirty && (reg_model.psw !== reg_model.psw2)">Passwords do not match</p> 
+            </div>
+            <button class="btn btn-block btn-primary" ng-disabled="regForm.$invalid"> Register </button>
+        </form>
+        <p style="padding: 5px 0;" class="text-success" ng-if="isRegistered">Registed Successfully  <a ui-sref="login" ng-if="isRegistered">Login</a> to continue ...</p>
+        <p style="padding: 5px 0;" class="text-danger" ng-if="!isRegistered && errText">{{errText}}</p>
+    </div>
+</div>

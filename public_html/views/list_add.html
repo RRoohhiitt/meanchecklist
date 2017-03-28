@@ -1,0 +1,22 @@
+<div class="fluid-container">
+    <div class="listContainer ">
+        <form id="form" name="listForm" role="form">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="list_entry.requirement" placeholder="Requirement" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="list_entry.contact_p" placeholder="Contact Person">
+            </div>
+<!--            <div class="form-group">
+                <input type="radio" ng-model="list_entry.status" ng-value="true"> <span class="text-success" style="padding-right: 5px;">Done</span> 
+                <input type="radio" ng-model="list_entry.status" ng-value="false"> <span class="text-success">Done</span>
+            </div>-->
+            <p class="text-success" ng-if="isCreated">Entry Created</p>
+            <p class="text-danger" ng-if="!isCreated && errText">{{errText}}</p>
+            <div class="col-md-12">
+                <div class="col-md-6"><button type='button' ng-click="createEntry(list_entry)" class="btn btn-primary text-left">SUBMIT</button></div>
+                <div class="col-md-6 text-right"><button type='button' ng-click ='createList()' class="btn btn-sm text-right text-success">Create List</button></div>
+            </div>
+        </form>
+    </div>
+</div>

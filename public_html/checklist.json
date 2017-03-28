@@ -1,0 +1,121 @@
+[{
+  "id":1,
+  "requirement":"Company Name",
+  "contact_p":"Support team",
+  "status":0
+},
+{
+  "id":2,
+  "requirement":"Comapny Id",
+  "contact_p":"Support team",
+  "status":0
+},
+{
+  "id":3,
+  "requirement":"Server name",
+  "contact_p":"Support team",
+  "status":0
+},
+{
+  "id":4,
+  "requirement":"Has Order comments or Product Comments or both",
+  "contact_p":"",
+  "status":0
+},
+{
+  "id":5,
+  "requirement":"Pre-order",
+  "contact_p":"1",
+  "status":0
+},
+{
+  "id":6,
+  "requirement":"OTP / Signup / Not Required",
+  "contact_p":"",
+  "status":0
+},
+{
+  "id":7,
+  "requirement":"Delivery Timeslot - minutes, hours / number of days preorder",
+  "contact_p":"",
+  "status":0
+},
+{
+  "id":8,
+  "requirement":"contact details (phone,email,address)",
+  "contact_p":"Support team",
+  "status":0
+},
+{
+  "id":9,
+  "requirement":"about us content",
+  "contact_p":"Support team / Khushboo",
+  "status":0
+},
+{
+  "id":10,
+  "requirement":"type of selection ( City-Area / City-outlet / outlets dropdown / single outlet button / only area / only subarea",
+  "contact_p":"Support team",
+  "status":0
+},
+{
+  "id":11,
+  "requirement":"assets (logo, images, fonts, backgrounds, layout, favicon, placeholder)",
+  "contact_p":"Design Team",
+  "status":0
+},
+{
+  "id":12,
+  "requirement":"ui - primary secondary colors",
+  "contact_p":"",
+  "status":0
+},
+{
+  "id":13,
+  "requirement":"check footer section copyrights 2016 and do not forget to change cmpany name",
+  "contact_p":"Support team",
+  "status":0
+},
+{
+  "id":14,
+  "requirement":"category menu ( vertical / horizontal) depends on no. of categories",
+  "contact_p":"Support team",
+  "status":0
+},
+{
+  "id":15,
+  "requirement":"has parent child category",
+  "contact_p":"",
+  "status":0
+},
+{
+  "id":16,
+  "requirement":"products ( with / without image )",
+  "contact_p":"khushboo / support",
+  "status":0
+},
+{
+  "id":17,
+  "requirement":"terms and conditions, privacy policy, disclaimers",
+  "contact_p":"",
+  "status":0
+},
+{
+  "id":18,
+  "requirement":"make email template and submit to",
+  "contact_p":"Support team",
+  "status":0
+},
+{
+  "id":19,
+  "requirement":"social links",
+  "contact_p":"",
+  "status":0
+},
+{
+  "id":20,
+  "requirement":"confirm order , check for email, sms, if any problem do update cache from cms ;  still not working then contact",
+  "contact_p":"abhishek",
+  "status":0
+}
+]

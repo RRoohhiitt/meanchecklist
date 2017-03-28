@@ -1,0 +1,94 @@
+
+<nav class="navbar navbar-default navbar-fixed-top ">
+    <div class="container-fluid">
+        <!--Brand and toggle get grouped for better mobile display--> 
+        <div class="navbar-header">
+            <a class="navbar-brand"  href="#">
+                <img src="img/userlog.png" height="65px" width="65px;">
+            </a>
+            <a class="navbar-brand-text navbar-brand"  href="#">
+                <span>Userlog</span>
+            </a>    
+            <button type="button" class="navb-btn navbar-toggle collapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>  
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <ul class="navb-right-icons nav navbar-nav navbar-right">
+            <li class="dropdown navb-anim">
+                <a href="#" class="dropdown-toggle"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user" aria-hidden="true"></i> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Sign-out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div> 
+</nav>
+<div class="navb-menu" id="navbar12">
+
+    <ul class="navb-ul">
+        <li>
+            <i class="fa fa-lg fa-plus menu-icons" aria-hidden="true"></i>
+            <a href="#">Checklist</a>
+        </li>
+        <!--DROWPDOWN UL-LI-->
+        <!--                <li class="navb-dropdown">
+            <i class="fa fa-lg fa-plus menu-icons" aria-hidden="true"></i>
+            <a href="#">Dropdown <span class="caret"></span></a>
+            <ul class="navb-dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                </ul>
+        </li>-->
+
+        <li>
+            <i class="fa fa-lg fa-plus menu-icons" aria-hidden="true"></i>
+            <a href="#">Add Checklist</a>
+        </li>
+        <li>
+            <i class="fa fa-lg fa-plus menu-icons" aria-hidden="true"></i>
+            <a href="#">News</a>
+        </li>
+        <li>
+            <i class="fa fa-lg fa-plus menu-icons" aria-hidden="true"></i>
+            <a href="#">Add Documents</a>
+        </li>
+    </ul>
+</div>
+<div class="main-section">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+            <table class="table CheckListtable">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">id</th>
+                        <th  style="width: 70%;">Requirements</th>
+                        <th  style="width: 20%;">Contact Person</th>
+                        <th  style="width: 5%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr ng-if="checklists" ng-repeat="checkEntry in checklists.list track by $index" ng-class="{'checked':checkEntry.status}" ng-click="checkEntry.status = !checkEntry.status;">
+                        <td>{{$index + 1}}</td>
+                        <td>{{checkEntry.requirement}}</td>
+                        <td>{{checkEntry.contact_p}}</td>
+                        <td><input type="checkbox" ng-checked="checkEntry.status" ng-model="checkEntry.status" ng-click="checkEntry.status = !checkEntry.status;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-if="!checklists.list || checklists.list.length == 0">
+                <p>No Checklist to show <a ui-sref="addtolist">Login</a> to add checklist</p>
+            </div>
+            <div class="text-right">
+                <button type='button' class="btn btn-default">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+</div>

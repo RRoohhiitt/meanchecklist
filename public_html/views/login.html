@@ -1,0 +1,17 @@
+<div class="fluid-container ">
+    <div class="col-md-4 col-md-offset-4 loginContainer">
+        <form name="loginForm" role="form" ng-submit="loginForm.$valid && login()">
+            <div class="form-group">
+                <label for="usr">Username</label>
+                <input type="text" placeholder="Username" id="usr" name="user" ng-model="login_model.user" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="psw">Password</label>
+                <input type="password" placeholder="Password" id="psw" name="pass" ng-model="login_model.pass" class="form-control" >
+            </div>
+            <p class="alert-danger" ng-if="errText">{{errText}}</p>
+            <button class="btn btn-block btn-primary"> Login</button>
+
+        </form>
+    </div>
+</div>

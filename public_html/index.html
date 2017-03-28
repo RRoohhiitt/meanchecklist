@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="UserLog">
+    <head>
+        <title>User Log</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+        <link rel="stylesheet/less" type="text/css" href="css/sidebar.less" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div ui-view></div>
+    </body>    
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/angular.js" type="text/javascript"></script>
+    <script src="js/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="js/less.js" type="text/javascript"></script>
+    <script src="js/done.js" type="text/javascript"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
+    <script src="js/userservice.js" type="text/javascript"></script>
+    <script src="js/angular-resource.min.js" type="text/javascript"></script>
+    <script>
+        $(document).on("click", 'button.navb-btn', function (e) {
+            
+            $('#navbar12').toggleClass('open');
+        });
+        $(document).on("click", 'button.navb-btn', function (e) {
+            $(this).toggleClass('menu-open');
+        });
+    </script>
+    <script src="/reload/reload.js"></script> <!-- LIVE RELOAD (TEMPORARY) --> 
+
+</html>
